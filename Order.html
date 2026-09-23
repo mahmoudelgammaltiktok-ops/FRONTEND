@@ -1,0 +1,122 @@
+<!doctype html> 
+<html lang="en" dir="rtl"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="white=device-width, initial-scale=1.0"> 
+<title>طلب جديد - ROASTEDBOLD</title> 
+<style> 
+body { 
+    font-family: Arial, Helvetica, sans-serif; 
+    background-color: #ffffff;
+    text-align: center; 
+    padding-top: 50px;
+} 
+
+.order-container  {
+    display: inline-block;
+    width: 400px;
+    background-color: #1f1301e2;
+    border: 2px solid #0101018a;
+    border-radius: 40px;
+    padding: 40px;
+    box-shadow: 0 0 30px #0101018a;
+    color: #ffffff;
+}
+
+h1 {
+    font-size: 35px;
+    color: #de980d;
+    margin-bottom: 20px;
+}
+
+.item-details {
+    background-color: #ffffff1a;
+    padding:15px;
+    border-radius: 40px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.item-details:hover {
+    color: #de980d;
+    font-weight: bold;
+}
+
+input{
+     width: 85%;
+    padding: 12px;
+    margin-bottom: 18px;
+    margin-top: 18px;
+    border-radius: 25px;
+    border: 2px solid #de980d;
+    font-size: 16px;
+    text-align: center;
+}
+
+.submit-btn {
+    width: 90%;
+    padding: 12px;
+    background-color: #000000;
+    color: #de980d;
+    border:3px solid #de980d;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.submit-btn:hover {
+    
+    background-color: #de980d;
+    color: #000;
+    border:3px solid #000;
+   
+}
+
+.back-link {
+    display: block;
+    margin-top: 20px;
+    color: #de980d;
+    text-decoration: none;
+}
+ 
+</style> 
+</head> 
+<body> 
+
+<div class="order-container"> 
+    <h1>تأكيد الطلب ☕</h1> 
+    
+    <!-- هنا هيظهر اسم القهوة وسعرها تلقائياً لما الزبون يدوس على الزرار -->
+    <div class="item-details">
+        <p>المشروب : <span id="coffee-name">تحميل...</span></p>
+        <p>الحساب : <span id="coffee-price">0</span> جنيه</p>
+    </div>
+
+    <!-- فورم بيانات الزبون -->
+    <form action="#">
+        <input type="text" placeholder="اسمك بالكامل" required>
+        <input type="text" placeholder="رقم الموبايل" required>
+        <input type="text" placeholder="العنوان بالتفصيل" required>
+        <button type="submit" class="submit-btn" onclick="alert('تم استلام طلبك بنجاح! 🎉')">تأكيد الأوردر</button>
+    </form>
+
+    <p style="font-size:18px; margin-top: 15px; color: #de980d">ROASTEDBOLD 🚀</p>
+</div>
+
+<script>
+    // كود جافا سكريبت بيقرا اسم المنتج وسعره من الرابط ويعرضهم فوق
+    const urlParams = new URLSearchParams(window.location.search);
+    const itemName = urlParams.get('item');
+    const itemPrice = urlParams.get('price');
+    
+   if (itemName) {
+        document.getElementById('coffee-name').innerText = itemName.replace(/-/g, ' ');
+    }
+    if (itemPrice) {
+        document.getElementById('coffee-price').innerText = itemPrice;
+    }
+</script>
+
+</body> 
+</html>

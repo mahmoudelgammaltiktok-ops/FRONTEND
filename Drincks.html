@@ -1,0 +1,299 @@
+<!doctype html> 
+<html lang="en" dir="rtl"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="white=device-width; initial-scale=1.0"> 
+<title>Dashboard - ROASTEDBOLD</title> 
+<style> 
+body { 
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url('0987.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-attachment: fixed; 
+    text-align: center; 
+    padding-top: 15px;
+} 
+
+header {
+    background-color: #000000ba;
+    font-weight: bold;
+    color: #de980d;
+    padding: 15px;
+    width: 1500px;
+    display: inline-block;
+    position: sticky;
+    border-radius: 50px;
+    box-shadow: 0 0 5px #ffab03;
+
+}
+
+
+.navbar a {
+    font-size: 1rem;
+    margin: 0 25px;
+    text-decoration: none;
+    color: #de980ddf;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 5s ease;
+
+}
+
+.navbar a:hover {
+    color: #814202;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.welcome-container { 
+    display: inline-block; 
+    width: 450px; 
+    border-radius: 150px; 
+    color: #000000;
+} 
+
+
+h1 { 
+    font-size: 35px; 
+    color: #ffab03; /* نفس اللون الذهبي المميز للزر في الصفحة الأولى */
+    margin-bottom: 5px;
+} 
+
+h2 { 
+    font-size: 25px; 
+    color: #ffab03; 
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 20px; 
+    color: #000000f6; 
+    margin-bottom: 10px;
+}
+
+h4 { 
+    font-size: 30px; 
+    color: #ffaa00; 
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+h5 {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    
+}
+
+h6 { 
+    font-size: 25px; 
+    color: #ffaa00; 
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.prise {
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+ 
+
+.required {
+    font-size: 25px;
+}
+.card {
+    background-color: #8a602254;
+    border: 2px solid #0101018a;
+    border-radius: 50px;
+    width: 280px;
+    padding: 2px;
+    box-shadow: 0 0 30px;
+    text-align: center;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    display: inline-block;
+
+}
+
+.card:hover {
+    background-color: #de980d99;
+    color: #000000;
+    font-weight: bold;
+    box-shadow: 0 0 1px #0000004f;
+}   
+.card img {
+    width: 273px;
+    height: 230px;
+    border-radius: 50px;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.logout-btn { 
+    width: 180px; 
+    padding: 12px;
+    background-color: #000000;
+    font-size: 16px; 
+    color: #de980d; 
+    border: 2px solid #de980d;
+    border-radius: 50px; 
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    margin-bottom: 10px;
+} 
+
+.logout-btn:hover { 
+    background-color: #de980d; 
+    color: #000000;
+} 
+
+.order-btn {
+    width: 120px;
+    padding: 9px;
+    background-color: #000000c8;
+    margin-top: 10px;
+    margin-bottom:10px;
+    border-radius: 25px;
+    color: #de980dcf;
+    border: 2px solid #de980d
+}
+
+.order-btn:hover {
+    background-color: #de980d;
+    color: #000000;
+    border: 2px solid #4a3202;
+}
+ 
+.btn {
+    background-color:#000000;
+    padding:19px;
+    font-size: 25px;
+    color: #de980d;
+    border: 3px solid #de980d;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.btn:hover {
+    background-color: #de980d;
+    color: #000000;
+    border: 2px solid #000000;
+}
+
+button {
+    width: 100px;
+    padding: 9px;
+    background-color: #fba803;
+    margin-top: 10px;
+    margin-bottom:10px;
+    border-radius: 25px;
+    border: 2px solid #000;
+}
+
+</style> 
+</head> 
+<body> 
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <a href="Drincks.html" class="nav-link">قسم المشروبات ☕</a>
+                <a href="foods.html" class="nav-link">قسم الماكولات 🍽️</a>
+                <a href="lole.html" class="nav-link">تسجيل الخروج ↩️</a>
+            </div>
+        </nav>
+    </header>
+
+<div class="pages.2">
+   <h6>☕مرحباً بكم في منيو القهوة الخاص بنا</h6>
+    <h2>☕اللي بيفهم في الاصول بن تقيل وي مظبوط</h2>
+    <h4>☕اختر قهوتك المفضله من القائمه الخاصه بنا</h4>   
+  <a href="search.html" class="btn">البحث عن المنتجات 🔍</a>
+</div>
+<div class="card" alt="Espreso">
+   <img src="2255.jpg"> 
+   <h3> اسبريسو بولد</h3>
+   <div class="prise">50:جنيه</div>
+   <button class="order-btn" onclick="window.location.href='order.html?item=Drinck-Coffe&price=50'">اطلب اللان</button>
+</div>
+
+<div class="card" alt="Espreso">
+   <img src="2266.jpg">
+   <h3> كورتادو الاصول</h3>
+   <div class="prise">70:جنيه</div>
+   <button class="order-btn" onclick="window.location.href='order.html?item=Drinck-Coffe&price=70'">اطلب اللان</button>
+</div>
+
+<div class="card" alt="Espreso">
+   <img src="2019.jpg"> 
+   <h3>موكا توست</h3>
+   <div class="prise">80:جنيه</div>
+   <button class="order-btn" onclick="window.location.href='order.html?item=Drinck-Coffe&price=80'">اطلب اللان</button>
+</div>
+
+<div class="card" alt="Espreso">
+   <img src="4560.jpg"> 
+   <h3> كابتشينو روستد</h3>
+   <div class="prise">100:جنيه</div>
+   <button class="order-btn" onclick="window.location.href='order.html?item=Drinck-Coffe&price=100'">اطلب اللان</button>
+</div>
+
+<div class="card" alt="Espreso">
+   <img src="4756.jpg"> 
+   <h3>قهوه تركي مظبوط </h3>
+   <div class="prise">120:جنيه</div>
+   <button class="order-btn" onclick="window.location.href='order.html?item=Drinck-Coffe&price=120'">اطلب اللان</button>
+</div>
+<div class="card" alt="Espreso">
+   <img src="3039.jpg"> 
+   <h3> امريكو جيت</h3>
+   <div class="prise">130:جنيه</div>
+   <button class="order-btn" onclick="window.location.href='order.html?item=Drinck-Coffe&price=130'">اطلب اللان</button>
+</div>
+
+<div class="card" alt="Espreso">
+   <img src="0030.jpg"> 
+   <h3>سبانش لاتيه </h3>
+   <div class="prise">150:جنيه</div>
+   <button class="order-btn" onclick="window.location.href='order.html?item=Drinck-Coffe&price=150'">اطلب اللان</button>
+</div>
+
+<div class="card" alt="Espreso">
+   <img src="9990.jpg"> 
+   <h3> كولد برو </h3>
+   <div class="prise">175:جنيه</div>
+   <button class="order-btn" onclick="window.location.href='order.html?item=Drinck-Coffe&price=120'">اطلب اللان</button>
+</div>
+<div class="card" alt="Espreso">
+   <img src="6690.jpg"> 
+   <h3>  كولد برو سائع</h3>
+   <div class="prise">175:جنيه</div>
+   <button class="order-btn" onclick="window.location.href='order.html?item=Drinck-Coffe&price=120'">اطلب اللان</button>
+</div>
+
+<div class="welcome-container"> 
+    <h1>"ROASTEDBOLD"</h1> 
+    
+    <a href="lole.html" class="logout-btn">تسجيل الخروج</a> 
+    
+</div><br>
+<script>
+
+
+</script>
+</body> 
+</html>

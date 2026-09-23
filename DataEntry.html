@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كافيه</title>
+    <link rel="stylesheet" href="newstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
+</head>
+<header>
+    <nav class="navbar">
+        <ul>
+            <li><i class="fa-solid fa-house"></i><a href="index.html">الصفحه الرئيسيه</a></li>
+            <li><i class="fa-solid fa-user-plus"></i><a href="DataEntry.html">تسجيل بينات الطالب</a></li>
+            <li><i class="fa-solid fa-eye"></i><a href="DataDisplay.html">عرض بينات الطالب</a></li>
+            <a href="#any-some">HELP</a>
+
+        </ul>
+    </nav>
+</header>
+<body>
+    
+    <div class="container">
+        <h1>سجل الدخول في الكافيه</h1>
+        <h2>سجل بياناتك هنا </h2>
+        <form class="form-style">
+            
+            <div class="form-group">
+                <label>الاسم ثلاثي<span class="required">*</span></label>
+                <input type="text" placeholder="أدخل الاسم" required>
+            </div>
+
+            <div class="form-group">
+                <label>الرقم القومي<span class="required">*</span></label>
+                <input type="text" id="number-ID" placeholder="ادخل الرقم القومي" required>
+            </div>
+
+               <div class="form-group">
+                <label>تاريخ الميلاد<span class="required">*</span></label>
+                <input type="date" id="date" required>
+            </div>
+
+            <div class="form-select">
+                <label>انواع القهوه<span class="required">*</span></label>
+                <select required>
+                    <option value="">اختر قهوتك</option>
+                    <option value="1">قهوتك (ساده)</option>
+                    <option value="2">قهوتك (مظبوط)</option>
+                    <option value="3">قهوتك (زياده)</option>
+                    <option value="4">اسبريسو(طرش)</option>
+                    <option value="5">ليموناتا</option>
+                    <option value="6">قهوه </option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>النوع<span class="required">*</span></label>
+                    <label class="radio-inline">
+                        <input type="radio" name="gender" id="male" required>
+                        <span>ذكر</span>
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="gender" id="female">
+                        <span>أنثى</span>
+                    </label>
+            </div>
+            
+            <div class="form-group">
+                <label>اللغات اللي تجدها<span class="required"> * </span></label>
+                <input type="checkbox" id="arbic" name="languages" value="arbic">
+                <label>العربيه</label>
+                <input type="checkbox" id="English" name="languages" value="English">
+                <label>انجليزي</label>
+                <input type="checkbox" id="french" name="languages" value="french">
+                <label>فرينسيه</label>
+            </div>
+
+            <button type="submit">إرسال</button>
+    
+        </form>
+    </div>
+ 
+<footer>
+    <p>&copy; 2026 جميع الحقوق مجفوظه</p>
+</footer>
+</body>
+</html>

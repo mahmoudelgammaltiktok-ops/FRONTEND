@@ -1,0 +1,78 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    text-align: center;
+    background-color: #feffff8c;
+}
+
+.container {
+   max-width: 550px;
+   margin: 50px auto;
+   padding: 20px;
+   border-radius: 10px;
+   border: 10px solid rgb(8, 8, 126);
+   box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+
+.form-style {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    border: 2px solid rgb(8, 8, 126);
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: inset 3px #000;
+    text-align: right;
+    font-size: 20px;
+
+}
+
+.form-group input[type="text"],[type="date"] {
+width: 90%;
+padding: 8px;
+border: 1px solid #614646;
+border-radius: 10px;
+box-sizing: border-box;
+}
+
+.form-select {
+margin-bottom: 20px;
+    border: 2px solid #280f0f;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: inset 3px #000;
+    text-align: right;
+    font-size: 20px;
+}
+.form-select select {
+ width: 90%;
+padding: 8px;
+border: 1px solid #614646;
+border-radius: 10px;
+box-sizing: border-box;
+}
+ button {
+    width: 150px;
+    padding: 7px;
+    background-color: rgb(6, 0, 193);
+    border: 2px solid #000000;
+    color: #feffff;
+    border-radius: 10px;
+ }
+.form-group label {
+color: rgb(0, 0, 0);
+}
+.required {
+    margin-right: 4px;
+   color: rgb(8, 16, 246);
+}
+
+.navbar ul li {
+    display: inline;
+    margin: ;
+
+}

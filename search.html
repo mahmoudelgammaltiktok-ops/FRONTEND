@@ -1,0 +1,260 @@
+<!doctype html> 
+<html lang="en" dir="rtl"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>البحث عن المنتجات - ROASTEDBOLD</title> 
+<style> 
+body { 
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url('0987.jpg'); /* نفس خلفية موقعك */
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-attachment: fixed; 
+    text-align: center; 
+    padding-top: 15px;
+    margin: 0;
+} 
+
+/* الهيدر والـ Navbar المتناسق مع تصميمك */
+header {
+    background-color: #000000;
+    font-weight: bold;
+    padding: 10px 20px;
+    max-width: 1200px;
+    margin: 0 auto 20px auto;
+    border-radius: 50px;
+    box-shadow: 0 0 15px #ffab03;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-link {
+    color: #de980d;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 8px 16px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #ffab03;
+}
+
+/* صندوق البحث */
+.search-box-container {
+    margin: 40px auto;
+    max-width: 500px;
+    padding: 0 20px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 15px 25px;
+    font-size: 20px;
+    border: 2px solid #ffab03;
+    border-radius: 50px;
+    background-color: #000000d0;
+    color: #fff;
+    outline: none;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(255, 171, 3, 0.3);
+}
+
+.search-input:focus {
+    box-shadow: 0 0 25px #ffab03;
+}
+
+/* رسالة عذراً لم نجد منتج */
+.no-results {
+    color: #ffaa00;
+    font-size: 24px;
+    display: none;
+    margin-top: 30px;
+}
+
+/* تنسيق الكروت لتطابق صفحة المنيو مع ميزة فرد الصورة */
+.card {
+    background-color: #8a6022c2; 
+    border: 2px solid #ffab038a;
+    border-radius: 30px; 
+    width: 280px;
+    overflow: hidden; 
+    padding: 0; 
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    text-align: center;
+    margin: 15px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.card img {
+    width: 100%; 
+    height: 210px;
+    object-fit: cover; 
+    display: block;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+h3 {
+    font-size: 20px; 
+    color: #ffab03; 
+    margin: 10px 0;
+}
+
+.prise {
+    font-size: 20px;
+    color: #ffffff; 
+    margin-bottom: 10px;
+}
+
+.order-btn {
+    width: 120px;
+    padding: 9px;
+    background-color: #000000c8;
+    border-radius: 25px;
+    color: #de980dcf;
+    border: 2px solid #de980d;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.order-btn:hover {
+    background-color: #de980d;
+    color: #000000;
+}
+</style> 
+</head> 
+<body> 
+
+    <!-- شريط التنقل -->
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <a href="Drincks.html" class="nav-link">☕ قسم القهوه</a>
+                <a href="foods.html" class="nav-link">🍽️ قسم الماكولات</a>
+                <a href="search.html" class="nav-link" style="color: #ffab03;">🔍 البحث</a>
+                <a href="lole.html" class="nav-link">🚪 تسجيل الخروج</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- حقل البحث -->
+    <div class="search-box-container">
+        <input type="text" id="searchInput" class="search-input" placeholder="اكتب اسم القهوة أو الأكلة هنا..." onkeyup="searchProducts()">
+        <p id="noResults" class="no-results">عذراً، لم نجد أي منتج بهذا الاسم ☕❌</p>
+    </div>
+
+    <!-- كل منتجاتك (اكل + شرب) نضعها هنا مع إضافة data-name للبحث السريع -->
+    <div id="productsContainer">
+
+        <!-- منتج 1 -->
+        <div class="card" data-name="اسبريسو بولد espresso bold">
+           <img src="2255.jpg"> 
+           <div class="card-body">
+               <h3> اسبريسو بولد</h3>
+               <div class="prise">50 جنيه</div>
+               <button class="order-btn" onclick="window.location.href='order.html?item=Drinck-Coffe&price=50'">اطلب الآن</button>
+           </div>
+        </div>
+
+        <!-- منتج 2 -->
+        <div class="card" data-name="كورتادو الاصول cortado">
+           <img src="2266.jpg">
+           <div class="card-body">
+               <h3> كورتادو الاصول</h3>
+               <div class="prise">70 جنيه</div>
+               <button class="order-btn" onclick="window.location.href='order.html?item=Drinck-Coffe&price=70'">اطلب الآن</button>
+           </div>
+        </div>
+
+        <!-- منتج 3 (مثال لأكلة) -->
+        <div class="card" data-name="برجر لحم مشوي burger">
+           <img src="2323.jpg"> <!-- ضع اسم صورة البرجر هنا -->
+           <div class="card-body">
+               <h3>برجر ROASTED مشوي</h3>
+               <div class="prise">95 جنيه</div>
+               <button class="order-btn" onclick="window.location.href='order.html?item=Food-Burger&price=95'">اطلب الآن</button>
+           </div>
+        </div>
+
+    </div>
+<div class="card" data-name="حواوشي hawawshi">
+   <img src="1717.jpg"> 
+   <h3>حواوشي</h3>
+   <div class="prise">15:جنيه</div>
+   <button class="order-btn" onclick="window.location.href='order.html?item=Drinck-Coffe&price=50'">اطلب اللان</button>
+</div>
+
+<div class="card" data-name="حواوشي مخصوص special hawawshi">
+   <img src="1818.jpg"> 
+   <h3>حواوشي مخصوص</h3>
+   <div class="prise">25:جنيه</div>
+   <button class="order-btn" onclick="window.location.href='order.html?item=Drinck-Coffe&price=50'">اطلب اللان</button>
+</div>
+
+<div class="card" data-name="كفته سيخ kofta skewer">
+   <img src="1919.jpg"> 
+   <h3>كفته سيخ</h3>
+   <div class="prise">70:جنيه</div>
+   <button class="order-btn" onclick="window.location.href='order.html?item=Drinck-Coffe&price=50'">اطلب اللان</button>
+</div>
+
+<div class="card" data-name="سندوتشات كفته sandwich kofta">
+   <img src="2020.jpg"> 
+   <h3>سندوتشات كفته</h3>
+   <div class="prise">70:جنيه</div>
+   <button class="order-btn" onclick="window.location.href='order.html?item=Drinck-Coffe&price=50'">اطلب اللان</button>
+</div>
+
+<div class="card" data-name="فراخ شيش chicken kebab">
+   <img src="2121.jpg"> 
+   <h3>فراخ شيش</h3>
+   <div class="prise">70:جنيه</div>
+   <button class="order-btn" onclick="window.location.href='order.html?item=Drinck-Coffe&price=50'">اطلب اللان</button>
+</div>   
+    <!-- الكود السحري للبحث الفوري -->
+    <script>
+    function searchProducts() {
+        // جلب الكلمة اللي كتبها المستخدم
+        let filter = document.getElementById('searchInput').value.toLowerCase();
+        // جلب كل الكروت
+        let cards = document.getElementsByClassName('card');
+        let anyVisible = false;
+
+        for (let i = 0; i < cards.length; i++) {
+            // قراءة الكلمات المفتاحية المكتوبة في الـ data-name
+            let name = cards[i].getAttribute('data-name').toLowerCase();
+            
+            // لو الاسم يحتوي على الكلمة المكتوبة في السرش
+            if (name.includes(filter)) {
+                cards[i].style.display = "inline-block"; // إظهار الكارت
+                anyVisible = true;
+            } else {
+                cards[i].style.display = "none"; // إخفاء الكارت
+            }
+        }
+
+        // إظهار رسالة "لم نجد منتج" لو كل الكروت اختفت
+        let noResults = document.getElementById('noResults');
+        if (anyVisible) {
+            noResults.style.display = "none";
+        } else {
+            noResults.style.display = "block";
+        }
+    }
+    </script>
+</body> 
+</html>

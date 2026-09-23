@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="white=device-width; initial-scale=1.0">
+  <title>lewoooooo</title>
+<style>
+   
+       body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-image: url('2212.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        text-align: center;
+        padding: 30px;
+       }
+
+       form {
+        background-color: #8a602254;
+        padding: 20px;
+        box-shadow: 0 0 40px #020202;
+        display: inline-block;
+        width: 480px;
+        border-radius: 70px;
+       }
+
+       h1 {
+        font-size: 35px;
+        color: #000000;
+        }
+
+         h2 {
+        font-size: 23px;
+        color: #000;
+        }
+
+       img {
+        width: 380px;
+        height: 360px;
+        margin-bottom: 20px;
+        border-radius: 70px;
+       }
+ 
+       label {
+        display: block;
+        font-size: 20px;
+        margin-bottom: 20px;   
+        text-align: right;
+        }
+
+       .pass {
+        font-size: 20px;
+        margin-top: 10px;
+       }
+
+       input {
+        width: 310PX;
+        padding: 14px;
+        border: 3px solid #000;
+        margin-bottom: 10PX;
+        border-radius: 20px;
+       }
+
+       button {
+        width: 150px;
+        background-color: #000000;
+        font-size: 16px;
+        color: #d48300;
+        border: 3px solid #cb8800;
+        border-radius: 50px;
+       }
+
+       .required {
+        color: #c28306;
+        margin-right: 5px;
+       }
+
+       button:hover {
+        background-color: #de980d;
+        color: #000000;
+        border: 3px solid #de980d;
+       }
+
+       input:focus,
+       select:focus {
+        border-color: #de980d;
+        outline: none;
+        background-color: aliceblue;
+       }
+       
+</style>
+</head>
+<body>
+  
+    <form action="Drincks.html">
+
+      <h1>"ROASTEDBOLD"</h1>
+      <h2>"Welcome please Login"</h2>
+      <img src="2214.jpg">
+
+      <label class="pass">Enter Username<span class="required"> * </span></label>
+      <input type="text" id="Username" placeholder="Enter your Username" required>
+
+      <label class="pass">Enter passward<span class="required"> * </span></label>
+      <input type="passward" id="passward" placeholder="Enter your passward" required>
+
+      <button type="submit" id="loginButton" onclick="login()">Login</button>
+ 
+       
+
+    </form>
+
+    <script>
+      function login() {
+
+       let user =document.getElementById("Username").value;
+       let pass =document.getElementById("passward").value;
+       const Cusername ="mosab";
+       const Cpasswored ="1234";
+       if (user === Cusername && pass === Cpasswored)   {
+             alert(" تم تسجيل الدخول بنجاح 🎉");
+       } else {
+            alert("اسم المستخدم او كلمه المرور غير صحيحه!");
+        }
+          window.location.href = "Drincks.html"; 
+          
+      }
+</script>
+
+</body>
+</html>
